@@ -1,0 +1,9 @@
+.nav-link{
+    color:black;
+    font-weight: 600;
+}
+.nav-link.active {
+    color: #348FD1;
+    /* text-decoration: underline; */
+  }
+  

@@ -1,0 +1,11 @@
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.link-loign{
+    font-size: 16px;
+    text-decoration: none;
+
+}

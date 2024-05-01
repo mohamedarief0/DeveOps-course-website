@@ -1,0 +1,30 @@
+.homes-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: start;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid #cbcbcf;
+  width: 400px;
+  height: 170px;
+  padding: 22px 21px;
+  margin: 30px;
+  text-decoration: none;
+}
+.homes-card {
+  transition: border 380ms ease;
+  transition: transform 280ms ease;
+}
+.homes-card:hover {
+  border: 1px solid rgb(255, 255, 255);
+  transform: rotate(-3deg);
+  box-shadow: 1px 5px 20px gainsboro;
+}
+.home-main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-wrap: wrap;
+}

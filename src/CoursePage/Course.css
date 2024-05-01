@@ -1,0 +1,39 @@
+.containercenter {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100vh;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.button-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  border: 1px solid #cbcbcf;
+  width: 310px;
+  height: 150px;
+}
+.button-card-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #8a71af;
+  border-radius: 10px;
+  border: none;
+  color: white;
+  width: 310px;
+  height: 150px;
+}
+.button-card,
+.button-card-2 {
+  transition: box-shadow 0.3s ease;
+}
+.button-card:hover {
+  box-shadow: 11px 10px 1px grey;
+}
+.button-card-2:hover {
+  box-shadow: 11px 10px 1px #63468f;
+}

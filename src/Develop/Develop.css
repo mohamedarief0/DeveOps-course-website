@@ -1,0 +1,11 @@
+
+  
+  /* Style the scrollbar track */
+::-webkit-scrollbar {
+    position: absolute;
+    z-index: 10;
+    width: 0; /*Specify the width of the scrollbar track*/
+  }
+  
+
+  
