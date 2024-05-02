@@ -1,15 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Home.css";
 import { Link } from "react-router-dom";
 
 function Home() {
+  const [selectedLabel, setSelectedLabel] = useState();
 
-  function CourseSubCards({ label, className, to, onClick }) {
+  function CourseSubCards({ label, className, to }) {
     const handleClick = () => {
-      if (onClick) {
-        onClick(label); // Pass the label value to the onClick handler
-        console.log(label)
-      }
+      setSelectedLabel(label); // Pass the label value to the onClick handler
+      console.log(label);
     };
     return (
       <Link className={className} to={to} onClick={handleClick}>

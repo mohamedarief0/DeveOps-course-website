@@ -5,15 +5,17 @@ import Course from "./CoursePage/Course";
 import Login from "./LoginPage/Login";
 import Home from "./HomePage/Home";
 import Dashboard from "./Dashboards/Dashboard";
-
+import ActiveTabProvider from "./ActiveTabProvider/ActiveTabProvider";
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Course />} />
-      <Route path="/login" element={<Login />} />
-      <Route path="/home" element={<Home />} />
-      <Route path="/dashboard/:id" element={<Dashboard />} />
-    </Routes>
+    <ActiveTabProvider>
+      <Routes>
+        <Route path="/" element={<Course />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/dashboard/:id" element={<Dashboard />} />
+      </Routes>
+    </ActiveTabProvider>
   );
 }
 
