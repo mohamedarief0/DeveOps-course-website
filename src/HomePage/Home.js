@@ -1,16 +1,21 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Home.css";
 import { Link } from "react-router-dom";
+import { useActiveTab } from "../ActiveTabProvider/ActiveTabProvider";
 
 function Home() {
-  const [selectedLabel, setSelectedLabel] = useState();
+  const { setSelectedLabel } = useActiveTab();
+
+  function handleCardClick(label) {
+    setSelectedLabel(label);
+  }
 
   function CourseSubCards({ label, className, to }) {
     const handleClick = () => {
       setSelectedLabel(label); // Pass the label value to the onClick handler
       console.log(label);
     };
-    return (
+    return ( 
       <Link className={className} to={to} onClick={handleClick}>
         <div className="card-body justify-content-center align-items-center">
           <h5 className="card-title text-black">{label}</h5>
@@ -29,25 +34,28 @@ function Home() {
       <div>
         <CourseSubCards
           label="DeveOps"
-          className="homes-card "
+          className="homes-card"
           to="/dashboard/devops"
+          onClick={() => handleCardClick("DeveOps")}
         />
         <CourseSubCards
           label="Contact"
           className="homes-card"
           to="/dashboard/contact"
+          onClick={() => handleCardClick("Contact")}
         />
       </div>
       <div>
         <CourseSubCards
           label="Develop"
           className="homes-card"
-          to="/dashboard/develop"
+          to="/dashboard/develop" onClick={() => handleCardClick("Develop")}
         />
         <CourseSubCards
           label="Jenkins"
           className="homes-card"
           to="/dashboard/jenkins"
+          onClick={() => handleCardClick("Jenkins")}
         />
       </div>
     </div>
