@@ -6,6 +6,7 @@ import { useActiveTab } from "../ActiveTabProvider/ActiveTabProvider";
 function Home() {
   const { setSelectedLabel } = useActiveTab();
 
+
   function handleCardClick(label) {
     setSelectedLabel(label);
   }
